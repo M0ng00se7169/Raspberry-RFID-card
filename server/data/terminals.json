@@ -1,0 +1,17 @@
+[
+  {
+    "term_guid": "123414",
+    "name": "STATION 1",
+    "is_engaged": true
+  },
+  {
+    "term_guid": "98765678",
+    "name": "Office Hall",
+    "is_engaged": false
+  },
+  {
+    "term_guid": "4321",
+    "name": "shop",
+    "is_engaged": false
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "broker": "nekit-X550VC",
+  "port": 2883,
+  "cert_path": "config/ca.crt",
+  "term_topic": "app/terminal",
+  "server_topic": "app/server",
+  "username": "client",
+  "password": "client_password"
+}
