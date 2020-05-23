@@ -33,8 +33,6 @@
     "worker_guid": "1234",
     "name": "ALEKS",
     "surname": "NEMK",
-    "cards": [
-      "4321"
-    ]
+    "cards": []
   }
 ]

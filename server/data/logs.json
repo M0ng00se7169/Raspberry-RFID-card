@@ -580,5 +580,17 @@
     "term_guid": "123414",
     "card_guid": "1234",
     "worker_guid": "987"
+  },
+  {
+    "time": "2020-05-22 21:49:33.418894",
+    "term_guid": "1996",
+    "card_guid": "1995",
+    "worker_guid": null
+  },
+  {
+    "time": "2020-05-22 21:49:40.595848",
+    "term_guid": "1996",
+    "card_guid": "1234",
+    "worker_guid": "987"
   }
 ]
