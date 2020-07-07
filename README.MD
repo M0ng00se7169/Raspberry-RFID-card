@@ -1,10 +1,10 @@
 # RFID Raspberry Card Manager [![Status](https://img.shields.io/badge/status-finished-brightgreen)](https://github.com/Ukasz09/RFID-card-reading)
 
-RFID Raspberry Card Manager written in Python with MVC and MQTT patterns
+RFID Raspberry Pi Card Manager written in Python with MVC and MQTT patterns
 <br/>
 - :white_check_mark: Client server publish/subscribe messaging pattern (by using MQTT 3.1.1 protocol) <br/>
 - :white_check_mark: Security and authentication (By using SSL and uthentication mechanism)
-- :white_check_mark: MVC (Model-View-Controller
+- :white_check_mark: MVC (Model-View-Controller)
 
 
 ## How to use it
