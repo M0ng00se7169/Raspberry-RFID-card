@@ -1,87 +1,47 @@
-# Project Title
+# RFID Raspberry Card Manager [![Status](https://img.shields.io/badge/status-finished-brightgreen)](https://github.com/Ukasz09/RFID-card-reading)
 
-One Paragraph of project description goes here
+RFID Raspberry Card Manager written in Python with MVC and MQTT patterns
+<br/>
+- :white_check_mark: Client server publish/subscribe messaging pattern (by using MQTT 3.1.1 protocol) <br/>
+- :white_check_mark: Security and authentication (By using SSL and uthentication mechanism)
+- :white_check_mark: MVC (Model-View-Controller
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## How to use it
+1. Install required packages (MQTT) <br/>
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+```bash
+pip install -r requirements.txt --user
 ```
-Give examples
-```
+2. Generate certificates and keys:
+   Generate pair of keys: <br/>
+	`openssl genrsa -des3 -out ca.key 2048` <br/>
+   Make certificate: <br/>
+	`openssl req -new -x509 -days 1826 -key ca.key -out ca.crt` <br/>
+   Make another pair of keys: <br/>
+	`openssl genrsa -out server.key 2048` <br/>
+	Sign certificate: <br/>
+	`openssl req -new -out server.csr -key server.key` <br/>
+	Verify certificate <br/>
+	`openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 360` <br/>
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+3.	Make password file (in your mosquitto installation folder, e.g. `/etc/mosquitto/`): <br/>
+	`mosquitto_passwd -c passwd.conf server` 
+4.  Modify mosquitto.conf file. Append this lines to it: 
+	```bash
+	allow_anonymous false
+	password_file //path to passwd.conf which you had made in section 3//
+	port 8883
+	cafile //path to ca.crt which you had made in section 2//
+	certfile //path to server.crt which you had made in section 2//
+	keyfile //path to server.key which you had made in section 2//
+	```
+5. Navigate to client and server directory
+6. Run script:
+```bash
+python3 main.py
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+___
+## 📫 Contact 
+Feel free to contact me! ✊
