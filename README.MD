@@ -13,7 +13,7 @@ RFID Raspberry Pi Card Manager written in Python with MVC and MQTT patterns
 ```bash
 pip install -r requirements.txt --user
 ```
-2. Generate certificates and keys:
+2. Generate certificates and keys: <br/>
    Generate pair of keys: <br/>
 	`openssl genrsa -des3 -out ca.key 2048` <br/>
    Make certificate: <br/>
