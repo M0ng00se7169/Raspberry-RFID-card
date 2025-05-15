@@ -143,5 +143,5 @@ media
 static
 
 # user files
-.idea/
+.idea*
 .vscode/

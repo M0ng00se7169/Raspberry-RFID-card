@@ -1,0 +1,38 @@
+[
+  {
+    "worker_guid": "4040",
+    "name": "JOHN",
+    "surname": "COOPER",
+    "cards": [
+      "500500"
+    ]
+  },
+  {
+    "worker_guid": "987",
+    "name": "JOCKO WILLINK",
+    "surname": "SMITH",
+    "cards": [
+      "1234"
+    ]
+  },
+  {
+    "worker_guid": "4321",
+    "name": "NEKIT",
+    "surname": "AHMED",
+    "cards": [
+      "5321"
+    ]
+  },
+  {
+    "worker_guid": "5051",
+    "name": "ALINA MALINA",
+    "surname": "MALINA",
+    "cards": []
+  },
+  {
+    "worker_guid": "1234",
+    "name": "ALEKS",
+    "surname": "NEMK",
+    "cards": []
+  }
+]
